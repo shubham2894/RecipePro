@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RecipePro</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: "Segoe UI", Arial, sans-serif;
+        }
+
+        body {
+            margin: 0;
+            background: linear-gradient(135deg, #f4f6f8, #e0e7ff);
+            overflow-x: hidden;
+        }
+
+        /* ===== NAVBAR ===== */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 50px;
+            background: white;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+            animation: slideDown 0.8s ease;
+        }
+
+        nav h1 {
+            color: #2563eb;
+            margin: 0;
+            font-size: 26px;
+        }
+
+        .nav-buttons a {
+            margin-left: 15px;
+            padding: 9px 22px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .login {
+            color: #2563eb;
+            border: 2px solid #2563eb;
+        }
+
+        .login:hover {
+            background: #2563eb;
+            color: white;
+        }
+
+        .register {
+            background: #2563eb;
+            color: white;
+        }
+
+        .register:hover {
+            transform: scale(1.05);
+        }
+
+        /* ===== HERO SECTION ===== */
+        .hero {
+            text-align: center;
+            padding: 120px 20px;
+            animation: fadeIn 1.2s ease;
+        }
+
+        .hero h2 {
+            font-size: 42px;
+            color: #111827;
+            animation: slideUp 1s ease;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #374151;
+            max-width: 650px;
+            margin: 25px auto;
+            line-height: 1.7;
+            animation: slideUp 1.3s ease;
+        }
+
+        /* ===== MESSAGE (ENHANCED LOOK) ===== */
+        .hero-message {
+            display: inline-block;
+            font-size: 18px;
+            color: #1f2937;
+            margin: 40px auto 25px;
+            padding: 14px 28px;
+            background: rgba(37, 99, 235, 0.08);
+            border-radius: 30px;
+            font-weight: 600;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+            animation: pulseFade 2s ease;
+        }
+
+        .hero-message:hover {
+            transform: scale(1.05);
+            transition: 0.3s ease;
+        }
+
+        /* ===== BUTTONS ===== */
+        .hero-buttons a {
+            display: inline-block;
+            margin: 10px;
+            padding: 14px 36px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            animation: slideUp 1.8s ease;
+        }
+
+        .hero-login {
+            background: #2563eb;
+            color: white;
+            box-shadow: 0 10px 20px rgba(37,99,235,0.35);
+        }
+
+        .hero-login:hover {
+            transform: translateY(-5px);
+        }
+
+        .hero-register {
+            border: 2px solid #2563eb;
+            color: #2563eb;
+        }
+
+        .hero-register:hover {
+            background: #2563eb;
+            color: white;
+            transform: translateY(-5px);
+        }
+
+        /* ===== ANIMATIONS ===== */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideDown {
+            from {
+                transform: translateY(-100%);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pulseFade {
+            0% {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<nav>
+    <h1>🍽️ RecipePro</h1>
+    <div class="nav-buttons">
+        <a href="/login/" class="login">Login</a>
+        <a href="/register/" class="register">Register</a>
+    </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+    <h2>Discover • Cook • Enjoy</h2>
+
+    <p>
+        Find exciting new dishes, explore tasty recipes from around the world,
+        and share your own creations with fellow food lovers.
+        Cooking has never been this fun.
+    </p>
+
+    <!-- MESSAGE (TEXT UNCHANGED) -->
+    <div class="hero-message">
+        ✨ Login or create an account to view, save, and enjoy full recipes.
+    </div>
+
+    <div class="hero-buttons">
+        <a href="/login/" class="hero-login">Login</a>
+        <a href="/register/" class="hero-register">Create Account</a>
+    </div>
+</section>
+
+</body>
+</html>
