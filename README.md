@@ -1,7 +1,7 @@
 # 🍽️ RecipePro
 
 RecipePro is a simple Django-based web application created as my **first Django project** for learning and practice purposes.  
-The project focuses on understanding Django fundamentals such as authentication, CRUD operations, templates, and basic UI design.
+The project focuses on understanding core Django fundamentals such as authentication, CRUD operations, templates, and basic UI design.
 
 ---
 
@@ -24,7 +24,7 @@ This project helped me gain hands-on experience with **Django backend developmen
 - 📝 Add, update, and delete recipes (CRUD)
 - 🖼️ Image upload support
 - 🔍 Search functionality
-- 👤 User-specific access (login required)
+- 👤 Login-protected access
 - 🎨 Clean and responsive UI
 - 🛡️ CSRF protection
 
@@ -34,10 +34,37 @@ This project helped me gain hands-on experience with **Django backend developmen
 
 - **Backend:** Python, Django  
 - **Frontend:** HTML, CSS  
-- **Database:** SQLite (default Django DB)  
+- **Database:** SQLite (default Django database)  
 - **Authentication:** Django Auth System  
 
 ---
 
 ## 📂 Project Structure (Simplified)
 
+```text
+RecipePro/
+├── manage.py
+├── db.sqlite3
+│
+├── RecipePro/
+│   ├── settings.py
+│   ├── urls.py
+│   ├── asgi.py
+│   └── wsgi.py
+│
+├── recipe/
+│   ├── migrations/
+│   ├── models.py
+│   ├── views.py
+│   ├── admin.py
+│   └── apps.py
+│
+├── templates/
+│   ├── home.html
+│   ├── landing_page.html
+│   ├── login.html
+│   ├── register.html
+│   └── update_recipe.html
+│
+└── static/
+    └── recipe/
